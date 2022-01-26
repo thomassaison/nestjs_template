@@ -4,6 +4,7 @@ import { ApiModule } from './api/api.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import applicationConfig from './config/application.config';
+import databaseConfig from './config/database.config';
 import { CoreModule } from './core/core.module';
 
 @Module({
@@ -13,7 +14,7 @@ import { CoreModule } from './core/core.module';
         ConfigModule.forRoot({
             isGlobal: true,
             envFilePath: '.env',
-            load: [applicationConfig],
+            load: [applicationConfig, databaseConfig],
         }),
     ],
     controllers: [AppController],
