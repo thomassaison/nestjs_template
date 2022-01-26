@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ApiModule } from './api/api.module';
 import { CoreModule } from './core/core.module';
 import { ConfigModule } from '@nestjs/config';
+import configuration from './config/configuration';
 
 @Module({
     imports: [
@@ -12,6 +13,7 @@ import { ConfigModule } from '@nestjs/config';
         ConfigModule.forRoot({
             isGlobal: true,
             envFilePath: '.env',
+            load: [configuration],
         }),
     ],
     controllers: [AppController],
