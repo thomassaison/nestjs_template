@@ -5,6 +5,7 @@ import { ApiModule } from './api/api.module';
 import { CoreModule } from './core/core.module';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
+import applicationConfig from './config/application.config';
 
 @Module({
     imports: [
@@ -13,7 +14,7 @@ import configuration from './config/configuration';
         ConfigModule.forRoot({
             isGlobal: true,
             envFilePath: '.env',
-            load: [configuration],
+            load: [applicationConfig],
         }),
     ],
     controllers: [AppController],
