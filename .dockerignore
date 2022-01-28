@@ -5,3 +5,5 @@
 !/src/**
 !/package.json
 !/nest-cli.json
+!/tsconfig.build.json
+!/tsconfig.json
