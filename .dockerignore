@@ -1,0 +1,7 @@
+# Ignore everything
+**
+
+# Do not ignore
+!/src/**
+!/package.json
+!/nest-cli.json
