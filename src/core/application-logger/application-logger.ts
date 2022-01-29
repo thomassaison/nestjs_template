@@ -39,4 +39,6 @@ export class ApplicationLogger extends ConsoleLogger {
 
         super.error(message, stack);
     }
+
+    // TODO: Implement Warning 
 }
