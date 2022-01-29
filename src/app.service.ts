@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
     getHello(): string {
-        return 'Hello World!';
+        Logger.log(AppService.name, 'OKIOKI');
+        return 'Hello World from NFT!';
     }
 }
